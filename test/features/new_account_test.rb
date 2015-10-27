@@ -8,9 +8,9 @@ class NewAccountTest < Capybara::Rails::TestCase
 
     assert_equal dashboard_path, current_path
     within('#user_info') do
-      assert page.has_content('Tester')
-      assert page.has_content('Test User')
-      assert page.has_content('test@user.com')
+      assert page.has_content?('Tester')
+      assert page.has_content?('Test User')
+      assert page.has_content?('test@user.com')
     end
   end
 

@@ -19,7 +19,12 @@ class SessionsController < ApplicationController
   end
 
   def show
-
+    if current_user
+      true
+    else
+      flash[:notice] = "You must login to view your data"
+      redirect_to root_path
+    end
   end
 
   protected

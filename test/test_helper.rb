@@ -7,7 +7,7 @@ class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
 
-  def self.auth_hash
+  def self.sample_auth_hash
     OpenStruct.new({
       'token' => '123abc',
       'raw_info' => OpenStruct.new({
@@ -25,5 +25,5 @@ class ActiveSupport::TestCase
   end
 
   OmniAuth.config.test_mode = true
-  OmniAuth.config.mock_auth[:twitter] = auth_hash
+  OmniAuth.config.mock_auth[:github] = sample_auth_hash
 end
