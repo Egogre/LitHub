@@ -11,21 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151027164721) do
-
-  create_table "users", force: :cascade do |t|
-    t.string   "github_id"
-    t.string   "token"
-    t.string   "name"
-    t.string   "avatar_url"
-    t.string   "email"
-    t.string   "nickname"
-    t.string   "following_url"
-    t.string   "followers_url"
-    t.string   "repos_url"
-    t.string   "starred_url"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
+ActiveRecord::Schema.define(version: 20151028181044) do
 
 end

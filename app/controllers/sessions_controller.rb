@@ -1,14 +1,14 @@
 class SessionsController < ApplicationController
 
   def create
-    user = User.find_or_create_from_auth_hash(auth_hash)
-    session[:user_id] = user.id
+    user = GithubUser.new(auth_hash)
+    session[:current_user] = user
     flash[:notice] = "Login successful"
     redirect_to dashboard_path
   end
 
   def destroy
-    session[:user_id] = nil
+    session[:current_user] = nil
     flash[:notice] = "You have logged out"
     redirect_to root_path
   end
@@ -20,7 +20,7 @@ class SessionsController < ApplicationController
 
   def show
     if current_user
-      true
+      @user = GithubUser.rebuild(current_user)
     else
       flash[:notice] = "You must login to view your data"
       redirect_to root_path

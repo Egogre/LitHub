@@ -12,12 +12,19 @@ gem 'puma'
 gem 'pg'
 gem 'omniauth-github'
 gem 'bootstrap-sass'
+gem 'hurley'
+gem 'better_errors'
 
 group :development, :test do
   gem 'minitest-rails-capybara'
   gem 'launchy'
   gem 'byebug'
   gem 'sqlite3'
+end
+
+group :test do
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do
