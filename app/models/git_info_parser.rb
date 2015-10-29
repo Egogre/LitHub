@@ -8,10 +8,6 @@ class GitInfoParser
     @connection = Hurley::Client.new(user.git_hub_root)
   end
 
-  def main_info
-    parse('')
-  end
-
   def repos
     parse('repos')
   end

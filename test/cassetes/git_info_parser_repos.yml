@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/users/repos
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Hurley v0.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 29 Oct 2015 00:17:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '58'
+      X-Ratelimit-Reset:
+      - '1446079625'
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Last-Modified:
+      - Sun, 09 Mar 2014 10:18:05 GMT
+      Etag:
+      - W/"96a0896687602d3b13b27435ba918a89"
+      Vary:
+      - Accept
+      - Accept-Encoding
+      X-Github-Media-Type:
+      - github.v3
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - deny
+      Content-Security-Policy:
+      - default-src 'none'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Served-By:
+      - c6c65e5196703428e7641f7d1e9bc353
+      X-Github-Request-Id:
+      - 18080531:1AD3:46BC32A:56316587
+    body:
+      encoding: ASCII-8BIT
+      string: '{"login":"repos","id":77416,"avatar_url":"https://avatars.githubusercontent.com/u/77416?v=3","gravatar_id":"","url":"https://api.github.com/users/repos","html_url":"https://github.com/repos","followers_url":"https://api.github.com/users/repos/followers","following_url":"https://api.github.com/users/repos/following{/other_user}","gists_url":"https://api.github.com/users/repos/gists{/gist_id}","starred_url":"https://api.github.com/users/repos/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/repos/subscriptions","organizations_url":"https://api.github.com/users/repos/orgs","repos_url":"https://api.github.com/users/repos/repos","events_url":"https://api.github.com/users/repos/events{/privacy}","received_events_url":"https://api.github.com/users/repos/received_events","type":"User","site_admin":false,"name":null,"company":null,"blog":null,"location":null,"email":null,"hireable":null,"bio":null,"public_repos":0,"public_gists":0,"followers":2,"following":0,"created_at":"2009-04-24T13:53:27Z","updated_at":"2014-03-09T10:18:05Z"}'
+    http_version: 
+  recorded_at: Thu, 29 Oct 2015 00:17:12 GMT
+recorded_with: VCR 2.9.3
